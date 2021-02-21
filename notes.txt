@@ -1,0 +1,27 @@
+- From an image you can run an instance of the container.
+- A container only lives as long as the process inside it is alive.
+- If you run an image that is not running any services, it will stop immediately.
+- 
+Commands:
+
+docker run <nameOfImage> => runs a container from the specified image
+
+docker ps => shows a list of all running containers
+
+docker ps -a => shows a list of all running or stopped containers
+
+docker stop <nameOfContainer> => stops the specific container, run docker ps to see the name of the container
+
+docker rm <nameOfContainer> => removes a container
+
+docker images => see a list of all the images existing on the host
+
+docker rmi <nameOfImage> => remove an image from the host. Make sure that you dont have
+                            any containers running that runs of the image.
+                            You must delete all the dependant containers to remove the image.
+
+docker pull <nameOfImage> => pull the image so that you dont have to download it when 
+                             whenever you want to run it.   
+
+
+
