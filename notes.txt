@@ -4,7 +4,9 @@
 - 
 Commands:
 
-docker run <nameOfImage> => runs a container from the specified image
+docker run <nameOfImage> => runs a container from the specified image, you wont be able to run commands until its stopped
+
+docker run -d <nameOfImage> => runs the container in detached mode, you will get back to prompt
 
 docker ps => shows a list of all running containers
 
@@ -24,4 +26,10 @@ docker pull <nameOfImage> => pull the image so that you dont have to download it
                              whenever you want to run it.   
 
 
+Execute a command when running a container:
+
+docker run <nameOfImage> sleep 5 => when the container starts, it runs the command, goes to sleep for 5 seconds
+                                    and then stops.
+
+docker exec <nameOfContainer> sleep 5 => run a command on a running container
 
